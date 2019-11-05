@@ -12,12 +12,12 @@ class :x:js-scope extends :x:element implements XHPAwaitable {
   use XHPAsync;
 
   protected async function asyncRender(): Awaitable<XHPRoot> {
-    $calls = Vector { };
-    $instances = Vector { };
+    $calls = vec [] ;
+    $instances = vec [ ];
     $this->setContext(':x:js-scope/calls', $calls);
     $this->setContext(':x:js-scope/instances', $instances);
 
-    $child_waithandles = Vector { };
+    $child_waithandles = vec [ ];
     foreach ($this->getChildren() as $child) {
       if ($child is :x:composable-element) {
         $child->__transferContext($this->getAllContexts());
