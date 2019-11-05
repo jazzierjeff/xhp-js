@@ -5,7 +5,7 @@
   "homepage": "https://github.com/hhvm/xhp-js",
   "require": {
     "facebook/xhp-lib": "^2.3.0",
-    "hhvm": "~3.6"
+    "hhvm": ">3.6"
   },
   "autoload": {
     "classmap": ["src/"]

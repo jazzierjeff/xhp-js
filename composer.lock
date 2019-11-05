@@ -1,32 +1,33 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72ba6d9aa73843cb48d768c71e2d7a19",
+    "content-hash": "3e6a3fd1d6467ae8bca6dffdd7aaf88a",
     "packages": [
         {
             "name": "facebook/xhp-lib",
-            "version": "v2.3.2",
+            "version": "2.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/facebook/xhp-lib.git",
-                "reference": "4d2e2640534f50debe04f6a398db064fa6b1bb72"
+                "url": "https://github.com/hhvm/xhp-lib.git",
+                "reference": "81786186841f19624b0d9b4a3b4581f9f35ae6a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/xhp-lib/zipball/4d2e2640534f50debe04f6a398db064fa6b1bb72",
-                "reference": "4d2e2640534f50debe04f6a398db064fa6b1bb72",
+                "url": "https://api.github.com/repos/hhvm/xhp-lib/zipball/81786186841f19624b0d9b4a3b4581f9f35ae6a9",
+                "reference": "81786186841f19624b0d9b4a3b4581f9f35ae6a9",
                 "shasum": ""
             },
             "require": {
-                "fredemmott/type-assert": "^0.2.0 || ^1.0",
-                "hhvm": "~3.12"
+                "hhvm": "^4.13.0",
+                "hhvm/type-assert": "^3.0"
             },
             "require-dev": {
-                "91carriage/phpunit-hhi": "^5.1.0",
-                "phpunit/phpunit": "^5.1.0"
+                "facebook/fbexpect": "^2.0.0",
+                "hhvm/hacktest": "^1.0.0",
+                "hhvm/hhvm-autoload": "^2.0"
             },
             "type": "library",
             "extra": {
@@ -34,14 +35,9 @@
                     "dev-master": "2.x-dev"
                 }
             },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "description": "Class library for XHP",
             "homepage": "https://github.com/facebook/xhp-lib",
@@ -51,45 +47,84 @@
                 "hhvm",
                 "xhp"
             ],
-            "time": "2016-12-04T21:31:50+00:00"
+            "time": "2019-08-27T03:06:55+00:00"
         },
         {
-            "name": "fredemmott/type-assert",
-            "version": "v1.1",
+            "name": "hhvm/hsl",
+            "version": "v4.25.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fredemmott/type-assert.git",
-                "reference": "38460b438ca85701585abe471d944c678d242847"
+                "url": "https://github.com/hhvm/hsl.git",
+                "reference": "82343bc9edcd047c36858021ee3ee3117f8c79f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fredemmott/type-assert/zipball/38460b438ca85701585abe471d944c678d242847",
-                "reference": "38460b438ca85701585abe471d944c678d242847",
+                "url": "https://api.github.com/repos/hhvm/hsl/zipball/82343bc9edcd047c36858021ee3ee3117f8c79f9",
+                "reference": "82343bc9edcd047c36858021ee3ee3117f8c79f9",
                 "shasum": ""
             },
             "require": {
-                "hhvm": "~3.12"
+                "hhvm": "^4.25"
             },
             "require-dev": {
-                "91carriage/phpunit-hhi": "~5.1",
-                "phpunit/phpunit": "~5.1"
+                "facebook/fbexpect": "^2.5.1",
+                "hhvm/hacktest": "^1.0",
+                "hhvm/hhvm-autoload": "^2.0",
+                "hhvm/hsl-experimental": "dev-master"
             },
             "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "ISC"
+                "MIT"
+            ],
+            "description": "The Hack Standard Library",
+            "time": "2019-10-24T20:20:47+00:00"
+        },
+        {
+            "name": "hhvm/type-assert",
+            "version": "v3.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hhvm/type-assert.git",
+                "reference": "d2d7b190df118461ab6c767ac41280aac1a2f501"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hhvm/type-assert/zipball/d2d7b190df118461ab6c767ac41280aac1a2f501",
+                "reference": "d2d7b190df118461ab6c767ac41280aac1a2f501",
+                "shasum": ""
+            },
+            "require": {
+                "hhvm": "^4.17",
+                "hhvm/hsl": "^4.0"
+            },
+            "require-dev": {
+                "facebook/fbexpect": "^2.0.0",
+                "hhvm/hacktest": "^1.0",
+                "hhvm/hhast": "^4.0",
+                "hhvm/hhvm-autoload": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
             ],
             "description": "Convert untyped data to typed data",
             "keywords": [
                 "TypeAssert",
                 "hack"
             ],
-            "time": "2017-02-15T02:26:23+00:00"
+            "time": "2019-11-01T00:26:30+00:00"
         }
     ],
     "packages-dev": [],
@@ -99,7 +134,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "hhvm": "~3.6"
+        "hhvm": ">3.6"
     },
     "platform-dev": []
 }
