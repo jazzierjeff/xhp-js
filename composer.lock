@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e6a3fd1d6467ae8bca6dffdd7aaf88a",
+    "content-hash": "718483bd053b9e5b68f13768f9449ecd",
     "packages": [
         {
             "name": "facebook/xhp-lib",

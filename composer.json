@@ -4,7 +4,7 @@
   "keywords": ["facebook", "xhp", "hhvm", "hack", "react", "js", "javascript"],
   "homepage": "https://github.com/hhvm/xhp-js",
   "require": {
-    "facebook/xhp-lib": "^2.3.0",
+    "facebook/xhp-lib": "2.x",
     "hhvm": ">3.6"
   },
   "autoload": {
