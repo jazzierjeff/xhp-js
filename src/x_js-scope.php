@@ -8,12 +8,13 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+
 class :x:js-scope extends :x:element implements XHPAwaitable {
   use XHPAsync;
 
   protected async function asyncRender(): Awaitable<XHPRoot> {
-    $calls = vec [] ;
-    $instances = vec [ ];
+    $calls = new JSCalls();
+    $instances = new JSInstances();
     $this->setContext(':x:js-scope/calls', $calls);
     $this->setContext(':x:js-scope/instances', $instances);
 
@@ -38,8 +39,8 @@ class :x:js-scope extends :x:element implements XHPAwaitable {
         <script>
           var XHPJS = window.XHPJS ? window.XHPJS : require('xhpjs');
           new XHPJS(
-            {json_encode($instances)},
-            {json_encode($calls)}
+            {$instances->toJson()},
+            {$calls->toJson()}
           );
         </script>
       </x:frag>;
